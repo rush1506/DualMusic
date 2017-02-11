@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tata.dualmusic">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleInstance"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FindFolders" />
+        <activity
+            android:name=".SongsActivity"
+            android:label="@string/title_activity_songs"
+            android:parentActivityName=".MainMenu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tata.dualmusic.MainMenu" />
+        </activity>
+        <activity
+            android:name=".PlaySongsActivity"
+            android:label="@string/title_activity_play_songs"
+            android:parentActivityName=".SongsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tata.dualmusic.SongsActivity" />
+        </activity>
+        <activity
+            android:name=".DualMusicActivity"
+            android:label="@string/title_activity_dual_music"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".MainMenu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tata.dualmusic.MainMenu" />
+        </activity>
+        <activity
+            android:name=".DualMusicSearchActivity"
+            android:label="@string/title_activity_dual_music_search"
+            android:parentActivityName=".DualMusicActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tata.dualmusic.DualMusicActivity" />
+        </activity>
+    </application>
+
+</manifest>

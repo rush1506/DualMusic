@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/notification_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Songs Title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"/>
+
+
+    <Button
+        android:id="@+id/notification_buttonSkipBackward"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/notification_Title"
+        android:layout_marginRight="16dp"
+        android:background="@android:drawable/ic_media_previous"
+        android:backgroundTint="@color/colorAccent" />
+
+
+    <Button
+        android:id="@+id/notification_buttonPlay"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/notification_Title"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/notification_buttonSkipBackward"
+        android:background="@android:drawable/ic_media_play"
+        android:backgroundTint="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/notification_buttonPause"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/notification_buttonPlay"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/notification_buttonPlay"
+        android:background="@android:drawable/ic_media_pause"
+        android:backgroundTint="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/notification_buttonSkipForward"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/notification_buttonPause"
+        android:layout_toRightOf="@+id/notification_buttonPause"
+        android:background="@android:drawable/ic_media_next"
+        android:backgroundTint="@color/colorAccent" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Dual Music</string>
+    <string name="title_activity_find_folders">FindFolders</string>
+    <string name="title_activity_songs">SongsActivity</string>
+    <string name="title_activity_play_songs">PlaySongsActivity</string>
+    <string name="pref_previously_started">first_time_open_app</string>
+    <string name="pref_previously_started_input_song_number">first_time_open_dual_opiton</string>
+    <string name="pref_previously_started_slidepanel">first_time_slide_panel</string>
+    <string name="title_activity_dual_music">DualMusicActivity</string>
+    <string name="input_song_numbers">song_numbers</string>
+    <string name="title_activity_dual_music_search">DualMusicSearchActivity</string>
+</resources>
