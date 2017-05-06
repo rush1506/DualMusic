@@ -326,7 +326,7 @@ public class DualMusicActivity extends AppCompatActivity {
                         Music tmp;
                         mBuilder[songChosenCount] = new NotificationCompat.Builder(getContext());
                         mBuilder[songChosenCount].setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
-                        mBuilder[songChosenCount].setContent()
+                        //mBuilder[songChosenCount].setContent();
 
                         tmp = chosenMusic;
 
