@@ -19,7 +19,7 @@
 
             <ImageView
                 android:id="@+id/dual_music_search_menu_item_SearchOk"
-                android:layout_width="50dp"
+                android:layout_width="35dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:src="@android:drawable/ic_menu_revert" />

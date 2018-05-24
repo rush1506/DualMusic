@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Songs Title"
-        android:textSize="30dp"
+        android:textSize="16dp"
         android:textStyle="bold" />
 
     <TextView
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/support_play_songs_Title"
         android:text="Artist"
-        android:textSize="25dp" />
+        android:textSize="12dp" />
 
     <TextView
         android:id="@+id/support_play_songs_TimeTextLeft"

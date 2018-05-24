@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:text="Please Enter The Amount Of Music: "
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
     <EditText

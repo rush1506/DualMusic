@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Songs Title"
-        android:textSize="23sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <TextView
@@ -17,6 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/notification_Title"
         android:text="Artist"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
 </RelativeLayout>
