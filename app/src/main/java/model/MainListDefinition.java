@@ -16,7 +16,7 @@ public class MainListDefinition {
     private static Uri AlbumsPath = Uri.parse("android.resource://com.tata.dualmusic/" + R.drawable.albums);
     private static Uri PlaylistsPath = Uri.parse("android.resource://com.tata.dualmusic/" + R.drawable.playlists);
     private static Uri DualMusicPath = Uri.parse("android.resource://com.tata.dualmusic/" + R.drawable.dual_music);
-    private static final String ThisTitles[] = {"Songs", "Dual Music", "Folders", "Artist", "Album", "Playlists"};
+    private static final String ThisTitles[] = {"Songs", "Dual Music", "Rescan Music", "Artist", "Album", "Playlists"};
     private static String ThisImagePathString[] = {SongsPath.toString(), DualMusicPath.toString(), FoldersPath.toString(),
             ArtistsPath.toString(), AlbumsPath.toString(), PlaylistsPath.toString()};
     private static Uri ThisImagePathUri[] = {SongsPath, DualMusicPath, FoldersPath, ArtistsPath, AlbumsPath, PlaylistsPath};

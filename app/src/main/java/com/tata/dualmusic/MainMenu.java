@@ -36,12 +36,13 @@ public class MainMenu extends AppCompatActivity {
     private ListView main_menu_List;
     private MainMenuListAdapter mainMenuListAdapter;
     private final int REQUEST_CODE_READ_DATA = 1506;
+    private AppCompatActivity activity = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
+        activity = this;
         main_menu_List = (ListView) findViewById(R.id.main_menu_Choice);
         mainMenuListAdapter = new MainMenuListAdapter(MainMenu.this, R.layout.support_main_menu_row);
         main_menu_List.setAdapter(mainMenuListAdapter);
@@ -235,6 +236,7 @@ public class MainMenu extends AppCompatActivity {
                         }
                         case "Playlists": {
                             //start playlists
+                            Toast.makeText(MainMenu.this, "Not implemented", Toast.LENGTH_SHORT).show();
                             break;
                         }
                         case "Dual Music": {
@@ -260,16 +262,29 @@ public class MainMenu extends AppCompatActivity {
 
                             break;
                         }
-                        case "Folders": {
-                            startActivity(new Intent(MainMenu.this, FindFolders.class));
+                        case "Rescan Music": {
+//                            startActivity(new Intent(MainMenu.this, FindFolders.class));
+                            if (ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                                if (ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                                    ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE_READ_DATA);
+                                } else {
+                                    ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE_READ_DATA);
+                                }
+                            } else {
+                                //Load data
+                                ScanForMusicList scanMusic = new ScanForMusicList();
+                                scanMusic.execute();
+                            }
                             break;
                         }
                         case "Artists": {
                             //start artists
+                            Toast.makeText(MainMenu.this, "Not implemented", Toast.LENGTH_SHORT).show();
                             break;
                         }
                         case "Albums": {
                             //start albums
+                            Toast.makeText(MainMenu.this, "Not implemented", Toast.LENGTH_SHORT).show();
                             break;
                         }
                         default:
